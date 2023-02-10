@@ -1,9 +1,5 @@
-*, *:before, *:after { 
-    margin:0;
-    padding:0;
-    font-family: Arial,sans-serif;
-  }
    
+  @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
   /* remove a linha dos links */
   a{
     text-decoration: none;
@@ -13,23 +9,26 @@
   a.links{
     display: none;
   }
-  .content{
+  .contente{
     width: 500px;
     min-height: 560px;    
-    margin: 0px auto;
+    margin: auto;
     position: relative;
-    margin-top: 35px;   
+    margin-top: 35px;
   }
-  h1{
+  div#cadastro{
+    position: relative;
+  }
+  h2{
     font-size: 48px;
     color: #1ebb26;
     padding: 2px 0 10px 0;
-    font-family: Arial,sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
     font-weight: bold;
     text-align: center;
     padding-bottom: 30px;
   }
-  h1:after{
+  h2:after{
     content: ' ';
     display: block;
     width: 100%;
@@ -38,11 +37,12 @@
     background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
     background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
   }
+
   p{
     margin-bottom:15px;
   }
    
-  .content p:first-child{
+  .contente p:first-child{
     margin: 0px;
   }
    
@@ -103,7 +103,7 @@
   input[type="submit"]:hover{
     background: #2ae904;
   }
-  .link{
+  .link_l{
     position: absolute;
     background: #e1eaeb;
     color: #7f7c7c;
@@ -112,14 +112,29 @@
     width: 440px;
     padding: 17px 30px 20px 30px;
     font-size: 16px;
+    margin-top: 62px;
     text-align: right;
     border-top: 1px solid #dbe5e8;
-   
     -webkit-border-radius: 0 0  5px 5px;
     border-radius: 0 0  5px 5px;
   }
    
-  .link a {
+  .link_c{
+    position: absolute;
+    background: #e1eaeb;
+    color: #7f7c7c;
+    left: 0px;
+    height: 20px;
+    width: 440px;
+    padding: 17px 30px 20px 30px;
+    font-size: 16px;
+    margin-top: auto;
+    text-align: right;
+    border-top: 1px solid #dbe5e8;
+    -webkit-border-radius: 0 0  5px 5px;
+    border-radius: 0 0  5px 5px;
+  }
+  .link_c a, .link_l a {
     font-weight: bold;
     background: #dbe5e8;
     padding: 6px;
@@ -134,13 +149,12 @@
     transition: all 0.4s  linear;
   }
    
-  .link a:hover {
+  .link_c a:hover , .link_l a:hover {
     color:rgba(68, 243, 68, 0.616);
     background: #f7f7f7;
     border: 1px solid #1ebb26;
   }
-  #cadastro, 
-#login{
+  #cadastro{
   position: absolute;
   top: 0px;
   width: 88%;   
@@ -159,10 +173,30 @@
   animation-duration: 0.5s;
   animation-timing-function: ease;
   animation-fill-mode: both;
+  } 
+#login{
+  position: absolute;
+  top: 25px;
+  width: 88%;   
+  padding: 50px 6% 120px 6%;
+  margin: 0 0 35px 0;
+  background: #f7f7f7;
+  border: 1px solid rgba(147, 184, 189,0.8);
+   
+  -webkit-box-shadow: 5px;
+  border-radius: 5px;
+   
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+ 
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
 }
 /* Efeito ao clicar no botão ( Ir para Login ) */
-#paracadastro:target ~ .content #cadastro,
-#paralogin:target ~ .content #login{
+#paracadastro:target ~ .contente #cadastro,
+#paralogin:target ~ .contente #login{
   z-index: 2;
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
@@ -172,8 +206,8 @@
 }
  
 /* Efeito ao clicar no botão ( Cadastre-se ) */
-#registro:target ~ .content #login,
-#paralogin:target ~ .content #cadastro{
+#registro:target ~ .contente #login,
+#paralogin:target ~ .contente #cadastro{
   -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
 }
@@ -223,3 +257,4 @@
       transform: translateX(-20px);
     }
   }
+

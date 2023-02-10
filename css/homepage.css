@@ -1,0 +1,51 @@
+  
+ @charset "utf-8";
+ @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
+ 
+
+  section#backgroud {
+    display: table;
+    width: auto;
+    height: auto;
+    padding: 200px 0;
+    text-align: center;
+    background: url(../img/homepage.jpg) no-repeat bottom center scroll;
+    background-position: 30% 25%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+
+   p{
+
+    color: rgb(0, 0, 0); text-shadow: 0 0 0.2em rgb(255, 255, 255);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 25px;
+    }
+
+  h2{
+
+    color: white; text-shadow: black 0.1em 0.1em 0.2em;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+  }  
+  
+  input#bt_comecar{
+    margin-top: 69px;
+    width: 30%!important;
+    cursor: pointer;  
+    background: #1ebb26;
+    padding: 8px 5px;
+    color: #fff;
+    font-size: 20px;  
+    border: 1px solid #fff;   
+    margin-bottom: 10px;  
+    text-shadow: 0 2px 1px #333;
+   
+    -webkit-border-radius: 5px;
+    border-radius: 10000px;
+   
+    transition: all 0.2s linear;
+  }
